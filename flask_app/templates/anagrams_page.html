@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title> 
+      Anagrams 
+    </title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="starter-template">
+        {% if word %}
+          <p class="lead">Anagrams: 
+            {{ anagrams }}
+          </p>
+        {% else %}
+          <p class="lead"> 
+            Input just one word: 
+          </p>
+        {% endif %}
+        <p class="searchbox"><input type="text" id="inputdata" name="inputdata"></p>
+        <p class="searchsubmit"><input type="submit" id="findanagrams" name="findanagrams" value="Find anagrams"></p>
+      </div>
+    </div>
+ 
+    <script>
+      document.getElementById("findanagrams").onclick = function() 
+      {
+  	    location.href = document.location.origin + '?input_word=' + document.getElementById('inputdata').value;
+      };
+    </script>
+  </body>
+</html>
+
