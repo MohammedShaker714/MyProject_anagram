@@ -1,4 +1,4 @@
-version: 'python'
+version: '3.7'
 
 services:
   flask_app:
